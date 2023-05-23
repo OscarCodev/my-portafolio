@@ -10,15 +10,15 @@ export default function Navbar() {
     <Options>
       <Option1 to="/">
         {" "}
-        <HiOutlineHome />{" "}
+        <HiOutlineHome /> <ToolTip>Home</ToolTip>
       </Option1>
       <Option2 to="/tecnologias">
         {" "}
-        <TbTools />{" "}
+        <TbTools /> <ToolTip>Tecnologias</ToolTip>
       </Option2>
       <Option3 to="/experiencia">
         {" "}
-        <TfiBag />{" "}
+        <TfiBag /> <ToolTip>Experiencia</ToolTip>
       </Option3>
     </Options>
   );
@@ -47,6 +47,20 @@ const Options = styled.div`
   }
 `;
 
+const ToolTip = styled.p`
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translate(23px, 35px);
+  @media (min-width: 992px) {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-200px, -23px);
+  }
+`;
+
 //Codigo reutilizable para las opciones
 const Option = css`
   color: white;
@@ -54,14 +68,28 @@ const Option = css`
   padding: 0.5rem;
   opacity: 0.3;
   transition: opacity 0.3s ease;
+  position: relative;
   &.active {
     opacity: 1;
   }
-  &:hover:not(.active){
+  &:hover:not(.active) {
     opacity: 0.5;
   }
+  &:hover {
+    ${ToolTip} {
+      opacity: 1;
+      transform: translateY(-60px);
+    }
+  }
+  //Comportamiento en desktop
   @media (min-width: 992px) {
     margin: 1rem 0;
+    &:hover {
+      ${ToolTip} {
+        opacity: 1;
+        transform: translate(30px, -23px);
+      }
+    }
   }
 `;
 
@@ -76,7 +104,6 @@ const Option1 = styled(NavLink)`
   &.active {
     filter: drop-shadow(0 0 2em rgb(22, 173, 221));
   }
- 
 `;
 
 const Option2 = styled(NavLink)`
