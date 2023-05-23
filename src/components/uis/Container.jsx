@@ -27,14 +27,14 @@ background: rgb(35, 30, 53);
 const ContentSup = styled.div`
   width: 100%;
   flex-grow: 1;
-  background-color: #231e35;
   display: flex;
   justify-content: center;
+  background-color: #231e35;
 `;
 
 const Content = styled.div`
   width: 100%;
-  flex-shrink: 1;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   @media (min-width: 992px) {

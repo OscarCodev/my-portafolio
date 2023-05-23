@@ -14,9 +14,9 @@ export default function Header() {
 const HeaderSup = styled.div`
   width: 100%;
   height: 60px;
-  background: #fff;
   display: flex;
   justify-content: center;
+  background: #fff;
 `;
 
 const ContainerHeader = styled.div`
