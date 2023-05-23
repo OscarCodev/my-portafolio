@@ -16,6 +16,5 @@ export default function TecnologiesScreen() {
 }
 
 const ContainerPage = styled.div`
-  flex-grow: 1;
-  background: green;
+  padding: 2rem;
 `;

@@ -28,20 +28,26 @@ export default function Navbar() {
 const Options = styled.div`
   width: 100%;
   height: 60px;
-  border: 1px solid yellow;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background: rgb(41, 32, 74);
+  background: linear-gradient(
+    0deg,
+    rgba(41, 32, 74, 0.26) 0%,
+    rgba(105, 105, 105, 0.26) 100%
+  );
+  //border: 1px solid white;
   //computadora
   @media (min-width: 992px) {
-    max-width: 60px;
+    width: 60px;
     height: 100%;
     flex-direction: column;
     justify-content: center;
   }
 `;
 
-//Codigo reutilizable para las opciones 
+//Codigo reutilizable para las opciones
 const Option = css`
   color: white;
   border-radius: 0.5rem;
@@ -51,7 +57,10 @@ const Option = css`
   &.active {
     opacity: 1;
   }
-  @media (min-width: 992px){
+  &:hover:not(.active){
+    opacity: 0.5;
+  }
+  @media (min-width: 992px) {
     margin: 1rem 0;
   }
 `;
@@ -67,6 +76,7 @@ const Option1 = styled(NavLink)`
   &.active {
     filter: drop-shadow(0 0 2em rgb(22, 173, 221));
   }
+ 
 `;
 
 const Option2 = styled(NavLink)`

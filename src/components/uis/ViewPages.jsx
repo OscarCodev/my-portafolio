@@ -7,6 +7,11 @@ import RoutesConfig from "../../RoutesConfig";
 export default function ViewPages() {
   return (
     <Principal>
+      <ContenedorIcons>
+        <button>Ico1</button>
+        <button>Ico2</button>
+        <button>Ico3</button>
+      </ContenedorIcons>
       <RoutesConfig />
     </Principal>
   );
@@ -18,7 +23,21 @@ const Principal = styled.div`
   width: 100%;
   height: calc(100vh - 120px);
   overflow-y: auto;
+  position: relative;
   @media (min-width: 992px) {
     height: calc(100vh - 60px);
+  }
+`;
+
+const ContenedorIcons = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  border-bottom-left-radius: 1rem;
+  background-color: gray;
+  button{
+    margin: .4rem;
   }
 `;

@@ -22,7 +22,7 @@ const HeaderSup = styled.div`
 const ContainerHeader = styled.div`
   width: 100%;
   height: 60px;
-  background: #fafafa;
+  background: F9F9F9;
   display: flex;
   justify-content: center;
   align-items: center;
