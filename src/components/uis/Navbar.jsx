@@ -24,6 +24,21 @@ export default function Navbar() {
   );
 }
 
+/* ¿Cómo debo crear un nuevo option?
+Primero: 
+Estiliza un Navlink, agregarle su degradado, filter, posicion del
+Tooltip en mobil, se debe heredar el componente option
+al final. 
+
+Aclaracion: el tooltip en pantalla grande sdesktop no necesita
+posicionarse manualmente. 
+
+Segundo:
+El navlink estilizado tendra el nombre de Option4,
+se le debe especificar una ruta, un icono y un Tooltip
+
+*/
+
 //Contenedor
 const Options = styled.div`
   width: 100%;
@@ -54,10 +69,11 @@ const ToolTip = styled.p`
   border-radius: 5px;
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
-  transform: translate(23px, 35px);
+  transform: translateY(30px);
+  //En computadora
   @media (min-width: 992px) {
     background-color: rgba(255, 255, 255, 0.3);
-    transform: translate(-200px, -23px);
+    transform: translate(-150px, -23px);
   }
 `;
 
@@ -75,26 +91,20 @@ const Option = css`
   &:hover:not(.active) {
     opacity: 0.5;
   }
-  &:hover {
-    ${ToolTip} {
-      opacity: 1;
-      transform: translateY(-60px);
-    }
-  }
   //Comportamiento en desktop
   @media (min-width: 992px) {
     margin: 1rem 0;
     &:hover {
       ${ToolTip} {
         opacity: 1;
-        transform: translate(30px, -23px);
+        transform: translate(45px, -23px);
       }
     }
   }
 `;
 
+//Option 1: Home 
 const Option1 = styled(NavLink)`
-  ${Option};
   background: rgb(22, 173, 221);
   background: linear-gradient(
     342deg,
@@ -104,10 +114,16 @@ const Option1 = styled(NavLink)`
   &.active {
     filter: drop-shadow(0 0 2em rgb(22, 173, 221));
   }
+  &:hover {
+    ${ToolTip} {
+      opacity: 1;
+      transform: translate(-15px, -80px);
+    }
+  }
+  ${Option};
 `;
 
 const Option2 = styled(NavLink)`
-  ${Option};
   background: rgb(200, 77, 207);
   background: linear-gradient(
     342deg,
@@ -117,10 +133,16 @@ const Option2 = styled(NavLink)`
   &.active {
     filter: drop-shadow(0 0 2em rgb(200, 77, 207));
   }
+  &:hover {
+    ${ToolTip} {
+      opacity: 1;
+      transform: translate(-40px, -80px);
+    }
+  }
+  ${Option};
 `;
 
 const Option3 = styled(NavLink)`
-  ${Option};
   background: rgb(231, 177, 49);
   background: linear-gradient(
     342deg,
@@ -130,4 +152,12 @@ const Option3 = styled(NavLink)`
   &.active {
     filter: drop-shadow(0 0 2em rgb(231, 177, 49));
   }
+  //Mover su ToolTip
+  &:hover {
+    ${ToolTip} {
+      opacity: 1;
+      transform: translate(-40px, -80px);
+    }
+  }
+  ${Option};
 `;

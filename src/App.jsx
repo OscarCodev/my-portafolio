@@ -3,6 +3,8 @@ import { GlobalStyle } from "./components/GlobalStyle";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/uis/Header";
 import Container from "./components/uis/Container";
+import "transition-style";
+
 
 export default function MyPortafolioApp() {
   return (
@@ -21,6 +23,7 @@ const ContainerGlobal = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 

@@ -1,20 +1,87 @@
 import React from "react";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export default function TecnologiesScreen() {
-  return <ContainerPage>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse itaque mollitia distinctio. Accusantium ea voluptatum enim voluptas impedit dolor dolore! Unde tenetur aliquam, debitis dolorum voluptates velit veritatis dicta fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi quaerat cupiditate. Eos quaerat maxime, officiis delectus dignissimos odio vel! Assumenda, laboriosam vero velit inventore soluta at eaque fugit architecto. lorem 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reiciendis natus cupiditate eius veritatis eligendi aperiam consectetur libero omnis amet, ea deserunt dolorem, fuga temporibus eos, aut voluptatibus impedit! Expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis aperiam ad tempore inventore animi at consectetur quam maiores libero optio molestias dolorum saepe voluptatem accusamus, dolorem assumenda vero, quaerat maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quam magni totam voluptates vero et quis unde modi? Laborum incidunt accusantium inventore a? Fuga cupiditate amet ad tempore aliquam doloribus.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quibusdam delectus nulla deleniti saepe animi, exercitationem tenetur reiciendis soluta sint? Natus voluptatibus obcaecati ipsa provident et ad fuga expedita itaque.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta fugiat ducimus sed facere nisi, officia mollitia labore aut animi alias, distinctio, repudiandae nobis dolor quisquam dolore ea! Consectetur, amet maiores!
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos molestiae vero expedita pariatur earum, iusto nostrum autem mollitia quidem nam, consequuntur delectus nobis alias reprehenderit corrupti illum tenetur repudiandae illo.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, hic modi! Distinctio ad praesentium quibusdam sunt eum eius, dicta ab numquam architecto quo excepturi commodi, dolorum consectetur? Dolores, architecto molestias.
-      lorem
-    
-    </p>
-  </ContainerPage>;
+  //const {frontend, backend, mobile, design} = tecnologias;
+
+  return (
+    <ContainerTecnologies transition-style="in:circle:hesitate">
+      <ContainerCampo title="Frontend">
+        {/*
+          tecnologies.map((tecnologia) => (
+            <CardTecnologia img={tecnologia.img}/>
+          ))
+          */}
+      </ContainerCampo>
+      <ContainerCampo title="Backend" />
+
+      <ContainerCampo title="Mobile" />
+      <ContainerCampo title="Design" />
+    </ContainerTecnologies>
+  );
 }
 
-const ContainerPage = styled.div`
-  padding: 2rem;
+const ContainerTecnologies = styled.div`
+  //border: 2px solid blue;
+  height: auto;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+
+  background: rgb(35, 30, 53);
+  background: linear-gradient(
+    90deg,
+    rgba(35, 30, 53, 1) 5%,
+    rgba(74, 55, 77, 1) 31%,
+    rgba(35, 30, 53, 1) 60%
+  );
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+`;
+
+function ContainerCampo({ title }) {
+  return (
+    <Container>
+      <h2>{title}</h2>
+      <ContainerCards>
+        <CardTecnologia />
+        <CardTecnologia />
+        <CardTecnologia />
+        <CardTecnologia />
+        <CardTecnologia />
+        <CardTecnologia />
+      </ContainerCards>
+    </Container>
+  );
+}
+
+const Container = styled.div`
+  width: 100%;
+  height: auto;
+  h2 {
+    text-align: center;
+    color: white;
+    border: 1px solid gray;
+    padding: 1rem;
+  }
+`;
+
+const ContainerCards = styled.div`
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+`;
+
+function CardTecnologia() {
+  return <Card />;
+}
+
+const Card = styled.div`
+  width: 100%;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
 `;

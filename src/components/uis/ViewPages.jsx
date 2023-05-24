@@ -29,15 +29,20 @@ const Principal = styled.div`
   }
 `;
 
+
+//Contenedor de los iconos de github, linkedin, email
 const ContenedorIcons = styled.div`
   position: absolute;
   top: 0;
   right: 0;
   width: auto;
-  height: auto;
+  height: 1.8rem;
+  z-index: 9999;
   border-bottom-left-radius: 1rem;
-  background-color: gray;
+  background-color: rgba(255,255,255,0.2);
   button{
     margin: .4rem;
+    border: none;
+    border-radius: .3rem;
   }
 `;
