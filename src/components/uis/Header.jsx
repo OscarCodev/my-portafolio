@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <HeaderSup>
         <ContainerHeader>
-            <Text>Oscar</Text>
+            <Text>oscarDev</Text>
         </ContainerHeader>
     </HeaderSup>
   )
@@ -22,7 +22,7 @@ const HeaderSup = styled.div`
 const ContainerHeader = styled.div`
   width: 100%;
   height: 60px;
-  background: F9F9F9;
+  background: #F9F9F9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +33,8 @@ const ContainerHeader = styled.div`
 `;
 
 const Text = styled.h1`
-  font-family: monospace;
+  font-family: 'JetBrains Mono';
+  font-size: 1.5rem;
+  font-weight: bolder;
   color: #231e35;
 `

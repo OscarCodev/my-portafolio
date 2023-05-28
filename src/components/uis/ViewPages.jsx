@@ -1,16 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import RoutesConfig from "../../RoutesConfig";
-
+//import { TfiBag } from "react-icons/tfi";
+import {AiFillGithub} from "react-icons/ai"
+import {BsLinkedin} from "react-icons/bs"
+import {RxCodesandboxLogo} from "react-icons/rx"
+import {MdEmail} from "react-icons/md"
 //En este componente mostramos las pantallas
 
 export default function ViewPages() {
   return (
     <Principal>
       <ContenedorIcons>
-        <button>Ico1</button>
-        <button>Ico2</button>
-        <button>Ico3</button>
+        <Icon color="#403e3e" borderLeft={true}><AiFillGithub/></Icon>
+        <Icon color="#737373"><RxCodesandboxLogo/></Icon>
+        <Icon color="#0A63BC"><BsLinkedin/></Icon>
+        <Icon color="#efa032"><MdEmail/></Icon>
       </ContenedorIcons>
       <RoutesConfig />
     </Principal>
@@ -36,13 +41,28 @@ const ContenedorIcons = styled.div`
   top: 0;
   right: 0;
   width: auto;
-  height: 1.8rem;
+  height: auto;
   z-index: 9999;
   border-bottom-left-radius: 1rem;
-  background-color: rgba(255,255,255,0.2);
-  button{
-    margin: .4rem;
-    border: none;
-    border-radius: .3rem;
-  }
+  background-color: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
 `;
+
+const Icon = styled.a`
+  color: #fff;
+  padding: .5rem;
+  opacity: 0.9;
+  background-color: none;
+  transition: opacity 0.2s ease-in, background-color 0.4s ease-in;
+  cursor: pointer;
+  border-bottom-left-radius: ${props => props.borderLeft && "1rem"};
+  &:hover{
+    opacity: 1;
+    color: ${(props) => props.color};
+    background: #F9F9F9;
+  }
+  
+`
+
+

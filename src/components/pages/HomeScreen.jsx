@@ -55,16 +55,34 @@ const Presentacion = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "JetBrains Mono";
   h2 {
     //border: 1px solid coral;
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 5rem;
+      width: 95px;
+      height: 6px;
+      background: rgb(22, 173, 221);
+      background: linear-gradient(
+        342deg,
+        rgba(22, 173, 221, 1) 41%,
+        rgba(56, 99, 207, 1) 100%
+      );
+      display: block;
+    }
   }
   p {
     margin-bottom: 1rem;
+    font-weight: normal;
     text-align: center;
     font-size: 1.2rem;
+    color: #dadada;
   }
   button {
     margin-bottom: 1rem;
@@ -91,7 +109,9 @@ const ContenedorImg = styled.div`
   //Comportamiento en desktop
   @media (min-width: 992px) {
     img {
-      width: 80%;
+      width: 100%;
+      height: calc(100vh - 60px);
+      //border: 1px solid red;
     }
   }
 `;
