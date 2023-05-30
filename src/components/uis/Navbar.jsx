@@ -83,10 +83,14 @@ const Option = css`
   border-radius: 0.5rem;
   padding: 0.5rem;
   opacity: 0.3;
-  transition: opacity 0.3s ease;
+  //transition: opacity 0.3s ease;
   position: relative;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
   &.active {
     opacity: 1;
+  }
+  &:active {
+    scale: 0.95;
   }
   &:hover:not(.active) {
     opacity: 0.5;

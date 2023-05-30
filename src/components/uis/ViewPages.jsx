@@ -43,7 +43,7 @@ const ContenedorIcons = styled.div`
   width: auto;
   height: auto;
   z-index: 9999;
-  border-bottom-left-radius: 1rem;
+  border-bottom-left-radius: 15px;
   background-color: rgba(255,255,255,0.1);
   display: flex;
   align-items: center;
@@ -54,13 +54,17 @@ const Icon = styled.a`
   padding: .5rem;
   opacity: 0.9;
   background-color: none;
-  transition: opacity 0.2s ease-in, background-color 0.4s ease-in;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  //transition: opacity 0.2s ease-in, background-color 0.2s ease-in;
   cursor: pointer;
   border-bottom-left-radius: ${props => props.borderLeft && "1rem"};
   &:hover{
     opacity: 1;
     color: ${(props) => props.color};
     background: #F9F9F9;
+  }
+  &:active {
+    scale: 0.95;
   }
   
 `
