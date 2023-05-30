@@ -28,7 +28,7 @@ const ContainerHeader = styled.div`
   align-items: center;
   @media (min-width: 992px){
     min-width: 992px;
-    max-width: 1366px;
+    max-width: 2100px;
   }
 `;
 

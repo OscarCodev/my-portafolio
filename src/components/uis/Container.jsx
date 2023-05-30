@@ -30,6 +30,7 @@ const ContentSup = styled.div`
   display: flex;
   justify-content: center;
   background-color: #231e35;
+  //border: 1px solid yellow;
 `;
 
 const Content = styled.div`
@@ -39,7 +40,7 @@ const Content = styled.div`
   flex-direction: column;
   @media (min-width: 992px) {
     min-width: 992px;
-    max-width: 1366px;
+    max-width: 2100px;
     display: flex;
     flex-direction: row-reverse;
   }
