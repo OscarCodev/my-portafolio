@@ -55,7 +55,7 @@ const Presentacion = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "JetBrains Mono";
+  
   h2 {
     //border: 1px solid coral;
     font-size: 2rem;

@@ -37,12 +37,12 @@ const ContainerTecnologies = styled.div`
     height: calc(100vh - 60px);
     grid-template-columns: 1fr 1fr 1fr;
     background: rgb(35, 30, 53);
-  background: linear-gradient(
-    90deg,
-    rgba(35, 30, 53, 1) 5%,
-    rgba(74, 55, 77, 1) 31%,
-    rgba(35, 30, 53, 1) 60%
-  );
+    background: linear-gradient(
+      90deg,
+      rgba(35, 30, 53, 1) 5%,
+      rgba(74, 55, 77, 1) 31%,
+      rgba(35, 30, 53, 1) 60%
+    );
   }
 `;
 
@@ -89,8 +89,9 @@ const Card = styled.div`
   width: 100%;
   height: 80px;
   background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
   transition: all 0.3s;
-  &:hover{
+  &:hover {
     transform: scale(0.95);
   }
 `;
