@@ -3,141 +3,30 @@ import styled from "styled-components";
 import proyect1 from "../../assets/proyect1.jpg";
 
 function ExperienceScreen() {
+  const data = ["NotesPro", "meditateMe", "pokeRank", "E-comerce"];
   return (
     <ContainerExperience transition-style="in:circle:top-right">
-      <ContainerProyect>
-        <h2>Notes Pro</h2>
-        <div className="containerInfo">
-          <div className="containerImg">
-            <img src={proyect1} alt="img" />
+      {data.map((card, i) => (
+        <ContainerProyect className="animate__animated animate__zoomIn">
+          <h2>Notes Pro</h2>
+          <div className="containerInfo">
+            <div className="containerImg">
+              <img src={proyect1} alt="img" />
+            </div>
+            <div className="containerTecnologias">
+              <div className="item"></div>
+              <div className="item"></div>
+              <div className="item"></div>
+              <div className="item"></div>
+              <div className="item"></div>
+            </div>
+            <div className="containerButtons">
+              <div className="buttonRepo"></div>
+              <div className="buttonLive">Live</div>
+            </div>
           </div>
-          <div className="containerTecnologias">
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-          </div>
-          <div className="containerButtons">
-            <div className="buttonRepo"></div>
-            <div className="buttonLive">Live</div>
-          </div>
-        </div>
-      </ContainerProyect>
-      <ContainerProyect>
-        <h2>Notes Pro</h2>
-        <div className="containerInfo">
-          <div className="containerImg">
-            <img src={proyect1} alt="img" />
-          </div>
-          <div className="containerTecnologias">
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-          </div>
-          <div className="containerButtons">
-            <div className="buttonRepo"></div>
-            <div className="buttonLive">Live</div>
-          </div>
-        </div>
-      </ContainerProyect>
-      <ContainerProyect>
-        <h2>Notes Pro</h2>
-        <div className="containerInfo">
-          <div className="containerImg">
-            <img src={proyect1} alt="img" />
-          </div>
-          <div className="containerTecnologias">
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-          </div>
-          <div className="containerButtons">
-            <div className="buttonRepo"></div>
-            <div className="buttonLive">Live</div>
-          </div>
-        </div>
-      </ContainerProyect>
-      <ContainerProyect>
-        <h2>Notes Pro</h2>
-        <div className="containerInfo">
-          <div className="containerImg">
-            <img src={proyect1} alt="img" />
-          </div>
-          <div className="containerTecnologias">
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-          </div>
-          <div className="containerButtons">
-            <div className="buttonRepo"></div>
-            <div className="buttonLive">Live</div>
-          </div>
-        </div>
-      </ContainerProyect>
-      <ContainerProyect>
-        <h2>Notes Pro</h2>
-        <div className="containerInfo">
-          <div className="containerImg">
-            <img src={proyect1} alt="img" />
-          </div>
-          <div className="containerTecnologias">
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-          </div>
-          <div className="containerButtons">
-            <div className="buttonRepo"></div>
-            <div className="buttonLive">Live</div>
-          </div>
-        </div>
-      </ContainerProyect>
-      <ContainerProyect>
-        <h2>Notes Pro</h2>
-        <div className="containerInfo">
-          <div className="containerImg">
-            <img src={proyect1} alt="img" />
-          </div>
-          <div className="containerTecnologias">
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-          </div>
-          <div className="containerButtons">
-            <div className="buttonRepo"></div>
-            <div className="buttonLive">Live</div>
-          </div>
-        </div>
-      </ContainerProyect>
-      <ContainerProyect>
-        <h2>Notes Pro</h2>
-        <div className="containerInfo">
-          <div className="containerImg">
-            <img src={proyect1} alt="img" />
-          </div>
-          <div className="containerTecnologias">
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-            <div className="item"></div>
-          </div>
-          <div className="containerButtons">
-            <div className="buttonRepo"></div>
-            <div className="buttonLive">Live</div>
-          </div>
-        </div>
-      </ContainerProyect>
+        </ContainerProyect>
+      ))}
     </ContainerExperience>
   );
 }
@@ -163,7 +52,8 @@ const ContainerProyect = styled.div`
   //border: 1px solid red;
   font-family: "JetBrains Mono";
   h2 {
-    color: white;
+    color: #f9f9f9;
+    font-size: 1.2rem;
     width: 100%;
     height: 50px;
     display: flex;
@@ -181,6 +71,10 @@ const ContainerProyect = styled.div`
   .containerImg {
     width: 100%;
     height: 170px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border: 1px solid #535252;
+    border-left: 2px solid #535252;
     img {
       border-top-right-radius: 1rem;
       border-top-left-radius: 1rem;
@@ -192,6 +86,8 @@ const ContainerProyect = styled.div`
     width: 100%;
     height: 50px;
     background-color: #353535;
+    border: 1px solid #535252;
+    border-left: 2px solid #535252;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -207,6 +103,9 @@ const ContainerProyect = styled.div`
     width: 100%;
     height: 50px;
     background-color: #1e1e1e;
+    border-left: 2px solid #535252;
+    border-right: 1px solid #535252;
+    border-bottom: 1px solid #535252;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     display: flex;

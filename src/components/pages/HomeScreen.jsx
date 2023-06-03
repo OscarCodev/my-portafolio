@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import imagenProgramador from "../../assets/Programer.jpg";
-
+import 'animate.css';
 export default function HomeScreen() {
   return (
     <ContainerPrincipal transition-style="in:circle:top-right">
-      <Presentacion>
-        <h2>I'm Oscar Bautista</h2>
+      <Presentacion className="animate__animated animate__zoomIn">
+        <h2>I'm <span>Oscar</span> Bautista</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
           beatae aut earum libero et aspernatur error! Explicabo, sequi officiis
@@ -15,7 +15,7 @@ export default function HomeScreen() {
         </p>
         <Button></Button>
       </Presentacion>
-      <ContenedorImg>
+      <ContenedorImg className="animate__animated animate__zoomInDown">
         <img src={imagenProgramador} alt="programador" />
       </ContenedorImg>
     </ContainerPrincipal>
@@ -38,7 +38,7 @@ const ContainerPrincipal = styled.div`
     );
   //5 20 40
   @media (min-width: 992px) {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px); 
     flex-direction: row;
     justify-content: center;
     background: linear-gradient(
@@ -61,12 +61,14 @@ const Presentacion = styled.div`
     font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
-    position: relative;
     color: #f9f9f9;
-    &::after {
+    span{
+      position: relative;
+    }
+    span::after {
       content: "";
       position: absolute;
-      left: 5rem;
+      left: 0rem;
       width: 95px;
       height: 6px;
       background: linear-gradient(to right, #a4a1ff, #65baff);
@@ -127,11 +129,11 @@ const Button = styled.div`
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
   &::after {
-    content: "Dowload CV";
+    content: "Download CV";
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(342deg, #2890b0 41%, #28417f 100%);
+    background: linear-gradient(342deg, #2890b0 41%, #0e43c7 100%);
     width: 100%;
     height: 100%;
     pointer-events: none;

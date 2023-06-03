@@ -4,17 +4,15 @@ import styled from "styled-components";
 export default function TecnologiesScreen() {
   //const {frontend, backend, mobile, design} = tecnologias;
 
+  const dataCampo = ["Design", "Frontend", "Backend"]
+
   return (
     <ContainerTecnologies transition-style="in:circle:top-right">
-      <ContainerCampo title="Design" />
-      <ContainerCampo title="Frontend">
-        {/*
-          tecnologies.map((tecnologia) => (
-            <CardTecnologia img={tecnologia.img}/>
-          ))
-          */}
-      </ContainerCampo>
-      <ContainerCampo title="Backend" />
+      {
+        dataCampo.map(campo => (
+          <ContainerCampo title={campo}/>
+        ))
+      }
     </ContainerTecnologies>
   );
 }
@@ -48,7 +46,7 @@ const ContainerTecnologies = styled.div`
 
 function ContainerCampo({ title }) {
   return (
-    <Container>
+    <Container className="animate__animated animate__zoomIn">
       <h2>{title}</h2>
       <ContainerCards>
         <CardTecnologia />
@@ -68,7 +66,7 @@ const Container = styled.div`
   h2 {
     text-align: center;
     color: white;
-    border: 1px solid gray;
+    //border: 1px solid gray;
     padding: 1rem;
   }
 `;
@@ -87,8 +85,9 @@ function CardTecnologia() {
 
 const Card = styled.div`
   width: 100%;
-  height: 80px;
+  height: 50px;
   background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #8b8b8b;
   border-radius: 1rem;
   transition: all 0.3s;
   &:hover {
