@@ -70,7 +70,7 @@ const Presentacion = styled.div`
       position: absolute;
       left: 0rem;
       width: 95px;
-      height: 6px;
+      height: 3px;
       background: linear-gradient(to right, #a4a1ff, #65baff);
       display: block;
     }
