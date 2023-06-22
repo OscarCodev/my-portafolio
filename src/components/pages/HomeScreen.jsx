@@ -8,10 +8,7 @@ export default function HomeScreen() {
       <Presentacion className="animate__animated animate__zoomIn">
         <h2>I'm <span>Oscar</span> Bautista</h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
-          beatae aut earum libero et aspernatur error! Explicabo, sequi officiis
-          sint nulla mollitia reprehenderit nostrum illum nisi? Natus dolores
-          corrupti velit.
+          Hola soy un desallador de software de latino America, me encanta crear programas y aplicaciones que resulten utiles y atractivos para los usuarios. Domino tecnologias de Frontend, Backend y Mobile. 
         </p>
         <Button></Button>
       </Presentacion>

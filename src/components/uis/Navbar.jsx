@@ -7,6 +7,7 @@ import { TfiBag } from "react-icons/tfi";
 
 export default function Navbar() {
   return (
+    <ContainerOptions>
     <Options>
       <Option1 to="/">
         {" "}
@@ -21,6 +22,7 @@ export default function Navbar() {
         <TfiBag /> <ToolTip>Experiencia</ToolTip>
       </Option3>
     </Options>
+    </ContainerOptions>
   );
 }
 
@@ -41,26 +43,43 @@ se le debe especificar una ruta, un icono y un Tooltip
 
 //Contenedor
 const Options = styled.div`
-  width: 100%;
+  width: 90%;
   height: 60px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  border-radius: 1.5rem;
   background: rgb(41, 32, 74);
   background: linear-gradient(
     0deg,
     rgba(41, 32, 74, 0.26) 0%,
     rgba(105, 105, 105, 0.26) 100%
   );
-  //border: 1px solid white;
+  border: 1px solid #929292;
   //computadora
   @media (min-width: 992px) {
     width: 60px;
-    height: 100%;
+    height: 60%;
     flex-direction: column;
     justify-content: center;
   }
 `;
+
+const ContainerOptions = styled.div`
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  //border: 1px solid yellow;
+  @media (min-width: 992px) {
+    width: 60px;
+    height: 100%;
+    
+    flex-direction: column;
+    justify-content: center;
+  }
+`;
+
 
 const ToolTip = styled.p`
   position: absolute;
@@ -85,7 +104,7 @@ const Option = css`
   opacity: 0.3;
   //transition: opacity 0.3s ease;
   position: relative;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   &.active {
     opacity: 1;
   }
@@ -107,7 +126,7 @@ const Option = css`
   }
 `;
 
-//Option 1: Home 
+//Option 1: Home
 const Option1 = styled(NavLink)`
   background: rgb(22, 173, 221);
   background: linear-gradient(

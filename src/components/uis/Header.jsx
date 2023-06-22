@@ -34,13 +34,14 @@ const HeaderSup = styled.div`
   height: 60px;
   display: flex;
   justify-content: center;
-  background: #fff;
+  background-color: #231e35;
 `;
 
 const ContainerHeader = styled.div`
   width: 100%;
   height: 60px;
   background: #f9f9f9;
+  border-bottom: 1px solid #929292;
   display: flex;
   justify-content: center;
   align-items: center;
