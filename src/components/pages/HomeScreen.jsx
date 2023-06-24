@@ -66,7 +66,7 @@ const Presentacion = styled.div`
       content: "";
       position: absolute;
       left: 0rem;
-      width: 95px;
+      width: 70px;
       height: 3px;
       background: linear-gradient(to right, #a4a1ff, #65baff);
       display: block;
@@ -86,12 +86,17 @@ const Presentacion = styled.div`
     h2{
       margin-bottom: 2rem;
       font-size: 2rem;
+      span::after {
+        width: 95px;
+      }
     }
     p {
       margin-bottom: 2rem;
       text-align: left;
       font-size: 1.2rem;
     }
+    
+
   }
 `;
 
