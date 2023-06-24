@@ -112,6 +112,7 @@ const ContainerExperience = styled.div`
 
       p {
         color: #919191;
+        font-size: .9rem;
       }
       button {
         width: 80px;
