@@ -35,7 +35,7 @@ export default function TecnologiesScreen() {
   return (
     <ContainerTecnologies transition-style="in:circle:top-right">
         {sections.map(({ data, title, keys }) => (
-          <ContainerCampo key={data[title]}>
+          <ContainerCampo key={data[title]} className="animate__animated animate__zoomIn">
             <h2>{data[title]}</h2>
             <div>
               {keys.map((key) => (
@@ -92,19 +92,20 @@ const ContainerCampo = styled.div`
   h2 {
     color: white;
     font-size: 1.5;
-    margin: 2rem;
+    margin: 2.5rem;
     border: 1px solid paleturquoise;
-    padding: .5rem 1rem ;
+    padding: .5rem 2rem ;
     border-radius: 1rem;
   }
   p {
     font-size: 1rem;
     color: white;
     margin-bottom: 1rem;
-    margin-top: .5rem;
+    //margin-top: .5rem;
   }
   .card{
     width: 50px;
+    margin-bottom: .5rem;
     height: 50px;
     border: 1px solid white;
     background-color: rgba(255,255,255,0.1);

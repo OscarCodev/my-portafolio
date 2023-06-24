@@ -27,9 +27,9 @@ function ExperienceScreen() {
           </p>
           <h2>Tecnologias: </h2>
           <div>
-            <button>uno</button>
-            <button>dos</button>
-            <button>tres</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
           </div>
 
           <h2>Live: </h2>
@@ -74,11 +74,12 @@ const ContainerExperience = styled.div`
     .containerNameImage {
       //border: 1px solid blue;
       width: 100%;
-      height: 60%;
+      height: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      //justify-content: center;
+      justify-content: flex-end;
       padding: 1rem;
       p,
       h2 {
@@ -87,26 +88,30 @@ const ContainerExperience = styled.div`
       }
       h2 {
         margin: 1rem;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
       }
       img {
         width: 100%;
+        max-width: 566px;
       }
     }
     .containerDescription {
       //border: 1px solid yellow;
       width: 100%;
-      height: 40%;
+      height: 50%;
       padding: 1rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      //justify-content: center;
+      justify-content: flex-start;
       h2 {
         padding: 0.3rem 0;
+        font-size: 1.1rem;
+        color: #e0e0e0;
       }
-      h2,
+
       p {
-        color: #e4e4e4;
+        color: #919191;
       }
       button {
         width: 80px;
@@ -127,10 +132,12 @@ const ContainerExperience = styled.div`
       .containerNameImage {
         width: 50%;
         height: 100%;
+        justify-content: center;
       }
       .containerDescription {
         width: 50%;
         height: 100%;
+        justify-content: center;
         h2 {
           padding: 1.5rem 0;
         }

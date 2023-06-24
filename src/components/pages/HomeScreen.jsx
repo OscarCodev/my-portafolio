@@ -55,7 +55,7 @@ const Presentacion = styled.div`
   
   h2 {
     //border: 1px solid coral;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
     text-align: center;
     color: #f9f9f9;
@@ -76,7 +76,7 @@ const Presentacion = styled.div`
     margin-bottom: 3rem;
     font-weight: normal;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #dadada;
   }
   @media (min-width: 992px) {
@@ -85,10 +85,12 @@ const Presentacion = styled.div`
     width: 80%;
     h2{
       margin-bottom: 2rem;
+      font-size: 2rem;
     }
     p {
       margin-bottom: 2rem;
       text-align: left;
+      font-size: 1.2rem;
     }
   }
 `;
@@ -97,7 +99,7 @@ const Button = styled.div`
   position: relative;
   background-color: transparent;
   color: #e8e8e8;
-  font-size: 17px;
+  font-size: .9rem;
   font-weight: 600;
   border-radius: 10px;
   width: 150px;
@@ -149,6 +151,10 @@ const Button = styled.div`
   }
   &:active {
     scale: 0.95;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1rem;
   }
 `;
 
