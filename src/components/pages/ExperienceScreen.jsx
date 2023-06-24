@@ -1,21 +1,46 @@
 import React from "react";
 import styled from "styled-components";
-import proyect1 from "../../assets/proyect1.jpg";
+import { MdNavigateNext } from "react-icons/md";
+import { MdNavigateBefore } from "react-icons/md";
+import proyecto1 from "../../assets/proyect1.jpg";
 
 function ExperienceScreen() {
   const data = ["NotesPro", "meditateMe", "pokeRank", "E-comerce"];
   return (
     <ContainerExperience transition-style="in:circle:top-right">
-      <div className="containerBoton"></div>
-      <div className="containerInfo">
+      <div className="containerBoton">
+        <Button>
+          <MdNavigateBefore />
+        </Button>
+      </div>
+      <div className="containerInfo animate__animated animate__zoomIn">
         <div className="containerNameImage">
-
+          <p>proyect 1/5</p>
+          <h2>meditateMe</h2>
+          <img src={proyecto1} alt="proyect" />
         </div>
         <div className="containerDescription">
+          <h2>Description: </h2>
+          <p>
+            Este proyecto administra las problematicas de organizacion en un
+            determinado proyecto de investigacion o un proyecto de software
+          </p>
+          <h2>Tecnologias: </h2>
+          <div>
+            <button>uno</button>
+            <button>dos</button>
+            <button>tres</button>
+          </div>
 
+          <h2>Live: </h2>
+          <button>Live</button>
         </div>
       </div>
-      <div className="containerBoton"></div>
+      <div className="containerBoton">
+        <Button>
+          <MdNavigateNext />
+        </Button>
+      </div>
     </ContainerExperience>
   );
 }
@@ -28,47 +53,107 @@ const ContainerExperience = styled.div`
   flex-direction: row;
   height: calc(100vh - 120px);
   background-color: #231e35;
-  border: 1px solid white;
-  .containerBoton{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  //border: 1px solid white;
+  .containerBoton {
+    //border: 1px solid white;
     height: calc(100vh - 120px);
     width: 50px;
-    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .containerInfo{
+  .containerInfo {
+    //border: 1px solid cornflowerblue;
     height: calc(100vh - 120px);
     flex-grow: 1;
-    background-color: cornflowerblue;
-
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    .containerNameImage{
+    .containerNameImage {
+      //border: 1px solid blue;
       width: 100%;
-      height: 50%;
-      background-color: blue;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      p,
+      h2 {
+        color: white;
+        text-align: center;
+      }
+      h2 {
+        margin: 1rem;
+        font-size: 1.8rem;
+      }
+      img {
+        width: 100%;
+      }
     }
-    .containerDescription{
+    .containerDescription {
+      //border: 1px solid yellow;
       width: 100%;
-      height: 50%;
-      background-color: yellow;
+      height: 40%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+        padding: 0.3rem 0;
+      }
+      h2,
+      p {
+        color: #e4e4e4;
+      }
+      button {
+        width: 80px;
+      }
     }
   }
   @media (min-width: 992px) {
-    height: calc(100vh - 60px); 
-    .containerBoton, .containerInfo{
-      height: calc(100vh - 60px)
+    height: calc(100vh - 60px);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .containerBoton,
+    .containerInfo {
+      height: calc(100vh - 60px);
     }
 
-    .containerInfo{
+    .containerInfo {
       flex-direction: row;
-      .containerNameImage{
+      .containerNameImage {
         width: 50%;
         height: 100%;
       }
-      .containerDescription{
+      .containerDescription {
         width: 50%;
         height: 100%;
+        h2 {
+          padding: 1.5rem 0;
+        }
       }
     }
   }
 `;
 
+const Button = styled.button`
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  &:active {
+    scale: 0.95;
+  }
+`;
