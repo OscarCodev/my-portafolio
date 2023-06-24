@@ -1,18 +1,56 @@
 import React from "react";
 import styled from "styled-components";
+import { dataTecnologias } from "../../data/dataTecnologias";
 
 export default function TecnologiesScreen() {
-  //const {frontend, backend, mobile, design} = tecnologias;
+  /*
+  const frontend = dataTecnologias[0];
+  const backend = dataTecnologias[1];
+  const mobile = dataTecnologias[2];
 
-  const dataCampo = ["Design", "Frontend", "Backend"]
+  const { categoriaPrincipal, basic, design, libraries, state, animation } =
+    frontend;
+  const {
+    categoriaPrincipal: categoriaBackend,
+    main,
+    database,
+    frameworks,
+  } = backend;
+  const {
+    categoriaPrincipal: categoriaMobil,
+    main: mainMobile,
+    state: stateMobile,
+    libraries: librariesMobile,
+    animation: animationMobile,
+  } = mobile;
+  */
+
+  const sections = [
+    { data: dataTecnologias[0], title: 'categoriaPrincipal', keys: ['basic', 'design', 'libraries', 'state', 'animation'] },
+    { data: dataTecnologias[1], title: 'categoriaPrincipal', keys: ['main', 'database', 'frameworks'] },
+    { data: dataTecnologias[2], title: 'categoriaPrincipal', keys: ['main', 'state', 'libraries', 'animation'] },
+    
+  ];
 
   return (
     <ContainerTecnologies transition-style="in:circle:top-right">
-      {
-        dataCampo.map(campo => (
-          <ContainerCampo title={campo}/>
-        ))
-      }
+        {sections.map(({ data, title, keys }) => (
+          <ContainerCampo key={data[title]}>
+            <h2>{data[title]}</h2>
+            <div>
+              {keys.map((key) => (
+                <>
+                  <p>{key}</p>
+                  <GridItems>
+                    {data[key].map((item) => (
+                      <div className="card"key={item}>{item}</div>
+                    ))}
+                  </GridItems>
+                </>
+              ))}
+            </div>
+          </ContainerCampo>
+        ))}
     </ContainerTecnologies>
   );
 }
@@ -20,11 +58,11 @@ export default function TecnologiesScreen() {
 const ContainerTecnologies = styled.div`
   //border: 2px solid blue;
   height: auto;
-  padding: 3rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  align-content: start;
   background: rgb(35, 30, 53);
+  padding: 1rem 0;
   background: linear-gradient(
     180deg,
     rgba(35, 30, 53, 1) 5%,
@@ -32,7 +70,8 @@ const ContainerTecnologies = styled.div`
     rgba(35, 30, 53, 1) 40%
   );
   @media (min-width: 992px) {
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
+    height: auto;
     grid-template-columns: 1fr 1fr 1fr;
     background: rgb(35, 30, 53);
     background: linear-gradient(
@@ -44,53 +83,44 @@ const ContainerTecnologies = styled.div`
   }
 `;
 
-function ContainerCampo({ title }) {
-  return (
-    <Container className="animate__animated animate__zoomIn">
-      <h2>{title}</h2>
-      <ContainerCards>
-        <CardTecnologia />
-        <CardTecnologia />
-        <CardTecnologia />
-        <CardTecnologia />
-        <CardTecnologia />
-        <CardTecnologia />
-      </ContainerCards>
-    </Container>
-  );
-}
-
-const Container = styled.div`
-  width: 100%;
-  height: auto;
+const ContainerCampo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  //border: 1px solid white;
   h2 {
-    text-align: center;
     color: white;
-    //border: 1px solid gray;
-    padding: 1rem;
+    font-size: 1.5;
+    margin: 2rem;
+    border: 1px solid paleturquoise;
+    padding: .5rem 1rem ;
+    border-radius: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+  }
+  .card{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 992px) {
+    height: auto;
   }
 `;
 
-const ContainerCards = styled.div`
-  width: 100%;
-  height: auto;
+const GridItems = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
-`;
-
-function CardTecnologia() {
-  return <Card />;
-}
-
-const Card = styled.div`
-  width: 100%;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid #8b8b8b;
-  border-radius: 1rem;
-  transition: all 0.3s;
-  &:hover {
-    transform: scale(0.95);
-  }
 `;

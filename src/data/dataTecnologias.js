@@ -1,33 +1,25 @@
 export const dataTecnologias = [
     {
-        category: "Frontend",
-        basic: ["img1", "img2", "ig3"],
-        design: ["img1"],
-        libraries: ["img1", "img2", "ig3", "img3"],
-        state: ["img1", "img2"],
-        animation: ["img1", "img2", "img3"]
+        categoriaPrincipal: "Frontend",
+        basic: ["1", "2", "3"],
+        design: ["1"],
+        libraries: ["1", "2", "3", "4", "5","6"],
+        state: ["1", "2"],
+        animation: ["1", "2", "3"]
     },
     {
-        category: "Backend",
-        main: ["img1", "img2", "img3"],
-        database: ["img1", "img2"],
-        frameworks: ["img1", "img2", "img3", "img4"]
+        categoriaPrincipal: "Backend",
+        main: ["1", "2", "3"],
+        database: ["1", "2"],
+        frameworks: ["1", "2", "3", "4"]
     },
     {
-        category: "Mobile",
-        main: ["flutter"],
-        state: ["state1","state2"],
-        libraries: ["librerie1", "librarie2", "librarie3"],
-        animation: ["animation1", "animation2"]
+        categoriaPrincipal: "Mobile",
+        main: ["1"],
+        state: ["1","2"],
+        libraries: ["1", "2", "3", "4", "5"],
+        animation: ["1", "2"]
     }
 ]
 
-/*
-tal vez modificar el modelo de datos para un mejor consumo
 
-const tecnologias = {
-    frontend: "front",
-    backend: "backend",
-    mobile: "mobile"
-}
- */

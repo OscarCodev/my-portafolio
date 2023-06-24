@@ -58,8 +58,8 @@ const Options = styled.div`
   border: 1px solid #929292;
   //computadora
   @media (min-width: 992px) {
-    width: 60px;
-    height: 60%;
+    width: 50px;
+    height: 50%;
     flex-direction: column;
     justify-content: center;
   }
@@ -70,13 +70,14 @@ const ContainerOptions = styled.div`
   height: 60px;
   display: flex;
   justify-content: center;
+  
   //border: 1px solid yellow;
   @media (min-width: 992px) {
     width: 60px;
     height: 100%;
-    
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 `;
 
